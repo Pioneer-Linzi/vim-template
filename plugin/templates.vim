@@ -416,7 +416,7 @@ endfunction
 " cursor at %HERE%. Used to implement the BufNewFile autocommand.
 "
 function <SID>TLoad()
-	if !line2byte( line( '$' ) + 1 ) == -1
+	if line2byte(line('$')+1) > 0
 		return
 	endif
 
